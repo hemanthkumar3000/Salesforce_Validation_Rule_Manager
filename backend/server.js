@@ -117,11 +117,7 @@ app.get("/toggle-rule/:id/:status", async (req, res) => {
 
     const updatedStatus = !currentStatus;
 
-    /*
-    -----------------------------------
-    GET EXISTING RULE DETAILS
-    -----------------------------------
-    */
+    
 
     const ruleResponse = await axios.get(
       `${instanceUrl}/services/data/v59.0/tooling/sobjects/ValidationRule/${ruleId}`,
@@ -134,11 +130,7 @@ app.get("/toggle-rule/:id/:status", async (req, res) => {
 
     const existingRule = ruleResponse.data;
 
-    /*
-    -----------------------------------
-    UPDATE RULE
-    -----------------------------------
-    */
+    
 
     await axios.patch(
       `${instanceUrl}/services/data/v59.0/tooling/sobjects/ValidationRule/${ruleId}`,
