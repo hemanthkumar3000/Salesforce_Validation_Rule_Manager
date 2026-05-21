@@ -30,7 +30,7 @@ function App() {
   try {
 
     await axios.get(
-      `https://salesforce-validation-rule-manager-82dv.onrender.com/toggle-rule/:id/:status/${id}/${status}`
+      `https://salesforce-validation-rule-manager-82dv.onrender.com/toggle-rule/${id}/${status}`
     );
 
     alert("Validation Rule Updated");
