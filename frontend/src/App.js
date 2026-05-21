@@ -6,7 +6,7 @@ function App() {
   const [rules, setRules] = useState([]);
 
   const loginToSalesforce = () => {
-    window.location.href = "https://salesforce-backend.onrender.com/login";
+    window.location.href = "https://salesforce-validation-rule-manager-82dv.onrender.com/login ";
   };
 
   const getValidationRules = async () => {
@@ -14,7 +14,7 @@ function App() {
     try {
 
       const response = await axios.get(
-        "https://salesforce-backend.onrender.com/validation-rules"
+        "https://salesforce-validation-rule-manager-82dv.onrender.com/validation-rules"
       );
 
       setRules(response.data);
@@ -30,7 +30,7 @@ function App() {
   try {
 
     await axios.get(
-      `https://salesforce-backend.onrender.com/toggle-rule/${id}/${status}`
+      `https://salesforce-validation-rule-manager-82dv.onrender.com/toggle-rule/:id/:status/${id}/${status}`
     );
 
     alert("Validation Rule Updated");
